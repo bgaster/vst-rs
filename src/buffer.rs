@@ -51,13 +51,13 @@ impl<'a, T: 'a + Float> AudioBuffer<'a, T> {
 
     /// The raw inputs to pass to processReplacing
     #[inline]
-    pub(crate) fn raw_inputs(&self) -> &[*const T] {
+    pub fn raw_inputs(&self) -> &[*const T] {
         self.inputs
     }
 
     /// The raw outputs to pass to processReplacing
     #[inline]
-    pub(crate) fn raw_outputs(&mut self) -> &mut [*mut T] {
+    pub fn raw_outputs(&mut self) -> &mut [*mut T] {
         &mut self.outputs
     }
 
